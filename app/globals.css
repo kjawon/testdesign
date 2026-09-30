@@ -18,3 +18,57 @@ h2,.sidebar nav button,.action-grid b,.data-panel h2{font-weight:750}
 .chat-body h3{font-weight:750;color:#101c32}
 .chat-compose>div,.chat-footer>p{color:#62718c;font-weight:500}
 .chat-title h2{font-weight:750}.chat-header p,.briefing header>span{font-weight:500}
+
+/* Approval list: shared shell, filters and full-height empty list. */
+.quick-links button{text-align:left;cursor:pointer;font-weight:600}
+.quick-links button:hover{color:#175dff}
+.sidebar nav button.active{background:#fff;color:#0755f9;border-radius:10px;box-shadow:0 1px 3px #352c5710}
+.sidebar nav button.active svg{color:#2768ff}
+.sidebar nav:has(.active){padding-left:8px;padding-right:8px}
+.sidebar nav:has(.active) button{padding-left:8px}
+.tabbar{position:relative}
+.page-tab{position:absolute;left:21px;bottom:0;width:112px;height:34px;background:white;border:1px solid #d9daf0;border-bottom:0;border-top:2px solid #665bff;border-radius:11px 11px 0 0;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-weight:700;color:#162840}
+.page-tab button{color:#8b89a4;cursor:pointer;padding:4px}
+.approval-page{padding:20px 38px 20px 40px;height:calc(100vh - 121px);min-height:720px;display:flex;flex-direction:column;gap:15px}
+.approval-filters{background:#edf4ff;border-radius:4px;padding:16px;display:flex;align-items:center;gap:24px;min-height:122px;flex-shrink:0}
+.approval-filter-fields{display:grid;grid-template-columns:176px 214px 298px 279px 279px;gap:10px;align-items:center}
+.approval-field{display:flex;align-items:center;gap:10px;min-width:0;font-size:13px;color:#183356}
+.approval-field>span{font-weight:700;flex-shrink:0;white-space:nowrap}
+.approval-field input,.approval-field select{height:40px;min-width:0;width:100%;font:inherit;font-weight:500;color:#183356;background:#fff;border:1px solid #cdd4df;border-radius:4px;padding:0 9px;outline:none}
+.approval-field input:focus,.approval-field select:focus{border-color:#3371ff;box-shadow:0 0 0 2px #3371ff18}
+.approval-select{position:relative;flex:1;min-width:0}
+.approval-select select{appearance:none;padding-right:28px;cursor:pointer}
+.approval-select svg{pointer-events:none;position:absolute;right:9px;top:14px;color:#333}
+.year-field>span,.type-field>span{width:54px}
+.organization-field>span,.deleted-field>span{width:54px}
+.business-field>span,.date-field>span{width:48px}
+.subject-field>span,.description-field>span{width:30px}
+.year-field select,.type-field select,.deleted-field select,.subject-field select{text-align:center}
+.type-field{grid-column:1}.deleted-field{grid-column:2}.date-field{grid-column:3}
+.approval-date-range{display:flex;gap:6px;min-width:0;flex:1}
+.approval-date{position:relative;min-width:0;flex:1}
+.approval-date input{font-size:14px;padding-right:26px}
+.approval-date svg{position:absolute;right:8px;top:9px;color:#7f8198}
+.approval-filter-actions{display:flex;gap:8px;margin-left:auto;align-self:flex-end;margin-bottom:25px}
+.approval-filter-actions button{height:40px;width:88px;border:1px solid #cbd0d9;background:white;border-radius:4px;display:flex;align-items:center;justify-content:center;gap:7px;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap}
+.approval-filter-actions .approval-search{color:#2463ff;border-color:#2463ff}
+.approval-results{flex:1;min-height:0;display:flex;flex-direction:column}
+.approval-list-toolbar{height:34px;margin-bottom:13px;display:flex;align-items:center;gap:12px;flex-shrink:0}
+.approval-list-toolbar h2{font-size:20px;color:#101820;letter-spacing:-.6px;font-weight:750}
+.approval-count{font-size:13px;color:#2b405a;font-weight:600;white-space:nowrap}.approval-count b{color:#286af4}
+.approval-status-tabs{display:flex;height:34px;border:1px solid #d2dcef;border-radius:8px;overflow:hidden;margin-left:1px}
+.approval-status-tabs button{padding:0 12px;border-right:1px solid #e4e8f0;color:#425b80;background:white;font-size:12px;cursor:pointer;white-space:nowrap;font-weight:500}
+.approval-status-tabs button:last-child{border:0}.approval-status-tabs button.selected{background:#e8f0ff;color:#0756ee;font-weight:700}
+.approval-new{margin-left:auto;width:68px;height:34px;border-radius:6px;background:#286bf4;color:#fff;font-weight:700}
+.approval-table{border:1px solid #cbd0d8;border-radius:8px;overflow:hidden;flex:1;min-height:350px;background:white}
+.approval-table table{height:100%;width:100%;table-layout:fixed;border-collapse:collapse}
+.approval-table thead{height:35px;background:#f4f5f7}
+.approval-table th{padding:0 10px;text-align:left;border-bottom:1px solid #d9e1f0;color:#384d68;font-size:12px;font-weight:700;white-space:nowrap}
+.approval-table th span{display:flex;align-items:center;gap:5px}
+.approval-table th svg{color:#8b99ad;fill:#fff;stroke-width:1.5}
+.approval-table td{height:auto;padding:0;border:0;color:#69798d;font-weight:500;text-align:center}
+.approval-empty{display:flex;align-items:center;justify-content:center;height:100%;font-size:12px;letter-spacing:.2px}
+.approval-bottom-space{height:38px;border:1px solid #e1e5eb;border-top:0;flex-shrink:0}
+@media(max-width:1800px){.approval-filter-fields{grid-template-columns:160px 190px 270px 230px minmax(180px,1fr);flex:1}.approval-filters{gap:16px}.approval-filter-actions button{width:76px}.approval-field{gap:8px}}
+@media(max-width:1550px){.approval-filter-fields{grid-template-columns:160px 190px 270px minmax(160px,1fr)}.description-field{grid-column:4;grid-row:2}.approval-filters{gap:14px}.approval-filter-actions{flex-direction:column;margin-bottom:0;gap:10px}.approval-page{padding:20px 24px}.approval-table th{padding:0 7px;font-size:11px}}
+@media(max-width:1200px){.approval-filter-fields{grid-template-columns:140px 175px 245px minmax(135px,1fr)}.approval-field>span{width:auto}.approval-field{font-size:12px}.approval-filter-actions button{width:65px}.approval-status-tabs button{padding:0 9px}}
